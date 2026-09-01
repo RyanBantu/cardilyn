@@ -57,6 +57,25 @@ function toggleAutoplay() {
   else startAutoplay()
 }
 
+function setupIntroToggle() {
+  const details = document.getElementById('toc-intro')
+  const content = document.getElementById('chapter-intro-content')
+  if (!details || !content) return () => {}
+
+  function sync() {
+    const open = details.open
+    content.hidden = !open
+    if (!open) stopAutoplay()
+    if (open) {
+      content.querySelectorAll('.reveal:not(.revealed)').forEach((el) => el.classList.add('revealed'))
+    }
+  }
+
+  details.addEventListener('toggle', sync)
+  sync()
+  return () => details.removeEventListener('toggle', sync)
+}
+
 function setupScrollSpy() {
   const tocLinks = Array.from(document.querySelectorAll('.toc-list a, .toc-jump-link'))
   const sections = tocLinks
@@ -118,6 +137,7 @@ export default function App() {
 
     setPhase('systole')
 
+    cleanupRef.current.push(setupIntroToggle())
     cleanupRef.current.push(setupScrollSpy())
     cleanupRef.current.push(setupRevealAnimations())
 

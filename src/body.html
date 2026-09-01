@@ -4,11 +4,49 @@
     <h1>How the heart is built, and how blood moves through it</h1>
     <p class="sub">Structure, chambers, muscle layers, every valve, every named artery and vein, and the cardiac cycle, in the order blood actually travels, with full anatomical detail preserved at every stage.</p>
 
+    <div class="flow-card hero-flow">
+      <svg viewBox="0 0 800 260">
+        <defs>
+          <path id="flowpath" d="M40,150 L200,150 L200,210 L380,210 L380,80 L500,80 L620,150 L620,210 L760,210" fill="none"/>
+        </defs>
+        <path d="M40,150 L200,150 L200,210 L380,210" fill="none" stroke="var(--deoxy)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M380,210 L380,80 L500,80" fill="none" stroke="var(--lung)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M500,80 L620,150 L620,210 L760,210" fill="none" stroke="var(--oxy)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <circle r="7" fill="#EFEFEA">
+          <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#flowpath"/>
+          </animateMotion>
+        </circle>
+
+        <circle cx="40" cy="150" r="4" fill="var(--deoxy)"/>
+        <circle cx="200" cy="150" r="4" fill="var(--deoxy)"/>
+        <circle cx="200" cy="210" r="4" fill="var(--deoxy)"/>
+        <circle cx="380" cy="210" r="4" fill="var(--deoxy)"/>
+        <circle cx="500" cy="80" r="4" fill="var(--lung)"/>
+        <circle cx="620" cy="150" r="4" fill="var(--oxy)"/>
+        <circle cx="620" cy="210" r="4" fill="var(--oxy)"/>
+        <circle cx="760" cy="210" r="4" fill="var(--oxy)"/>
+
+        <text x="40" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">Vena cava</text>
+        <text x="200" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">RA</text>
+        <text x="380" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">RV</text>
+        <text x="440" y="55" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">Lungs</text>
+        <text x="620" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">LA / LV</text>
+        <text x="760" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">Aorta</text>
+      </svg>
+      <div class="flow-legend">
+        <span><span class="dot" style="background:var(--deoxy)"></span>deoxygenated</span>
+        <span><span class="dot" style="background:var(--lung)"></span>gas exchange</span>
+        <span><span class="dot" style="background:var(--oxy)"></span>oxygenated</span>
+      </div>
+    </div>
+
     <div class="toc-stack" aria-label="Table of contents">
-      <details class="toc-card">
+      <details class="toc-card toc-card-intro" id="toc-intro">
         <summary class="toc-card-summary">
           <span class="toc-chapter-num">Chapter 1</span>
-          <span class="toc-chapter-title">Intro</span>
+          <span class="toc-chapter-title">The Heart</span>
           <span class="toc-chevron" aria-hidden="true"></span>
         </summary>
         <div class="toc-card-body">
@@ -53,49 +91,13 @@
         </div>
       </details>
     </div>
-
-    <div class="flow-card" style="margin-top:28px">
-      <svg viewBox="0 0 800 260">
-        <defs>
-          <path id="flowpath" d="M40,150 L200,150 L200,210 L380,210 L380,80 L500,80 L620,150 L620,210 L760,210" fill="none"/>
-        </defs>
-        <path d="M40,150 L200,150 L200,210 L380,210" fill="none" stroke="var(--deoxy)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M380,210 L380,80 L500,80" fill="none" stroke="var(--lung)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M500,80 L620,150 L620,210 L760,210" fill="none" stroke="var(--oxy)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
-        <circle r="7" fill="#EFEFEA">
-          <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
-            <mpath href="#flowpath"/>
-          </animateMotion>
-        </circle>
-
-        <circle cx="40" cy="150" r="4" fill="var(--deoxy)"/>
-        <circle cx="200" cy="150" r="4" fill="var(--deoxy)"/>
-        <circle cx="200" cy="210" r="4" fill="var(--deoxy)"/>
-        <circle cx="380" cy="210" r="4" fill="var(--deoxy)"/>
-        <circle cx="500" cy="80" r="4" fill="var(--lung)"/>
-        <circle cx="620" cy="150" r="4" fill="var(--oxy)"/>
-        <circle cx="620" cy="210" r="4" fill="var(--oxy)"/>
-        <circle cx="760" cy="210" r="4" fill="var(--oxy)"/>
-
-        <text x="40" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">Vena cava</text>
-        <text x="200" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">RA</text>
-        <text x="380" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">RV</text>
-        <text x="440" y="55" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">Lungs</text>
-        <text x="620" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">LA / LV</text>
-        <text x="760" y="235" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">Aorta</text>
-      </svg>
-      <div class="flow-legend">
-        <span><span class="dot" style="background:var(--deoxy)"></span>deoxygenated</span>
-        <span><span class="dot" style="background:var(--lung)"></span>gas exchange</span>
-        <span><span class="dot" style="background:var(--oxy)"></span>oxygenated</span>
-      </div>
-    </div>
   </div>
+
+  <div id="chapter-intro-content" class="chapter-content" hidden>
 
   <header id="chapter-intro" class="chapter-head">
     <div class="chapter-label">Chapter 1</div>
-    <h2 class="chapter-title">Intro</h2>
+    <h2 class="chapter-title">The Heart</h2>
     <p class="chapter-desc">How the heart is built and how blood moves through it, from structure and valves to coronary supply and the cardiac cycle.</p>
   </header>
 
@@ -670,6 +672,8 @@
       <tr><td>Thebesian veins</td><td>Cardiac vein</td><td>Drain directly into any chamber</td></tr>
     </table>
   </section>
+
+  </div>
 
   <header id="chapter-calcifications" class="chapter-head chapter-head-upcoming">
     <div class="chapter-label">Chapter 2</div>
