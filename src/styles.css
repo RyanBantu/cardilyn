@@ -199,7 +199,7 @@
   .toc-list a.active .toc-title{color:var(--ink);}
   .toc-num{
     flex-shrink:0;
-    width:28px;
+    width:36px;
     font-family:var(--mono);
     font-size:11px;
     font-weight:500;
@@ -397,6 +397,11 @@
   }
   .fc-split{display:flex; justify-content:center; gap:40px; margin-top:4px;}
   .fc-split .fc-box{width:180px;}
+
+  /* ---------- CALCIFICATION SECTION ---------- */
+  .artery-svg circle, .artery-svg path, .artery-svg .calc-dot{transition:opacity .6s ease;}
+  .stage-readout{font-family:var(--mono); font-size:13px; color:var(--lung); min-height:20px; margin:14px 0;}
+  ul.plain li.amber-item{border-left-color:#BA7517;}
 
   /* ---------- SYSTOLE / DIASTOLE TOGGLE ---------- */
   .toggle-row{display:flex; gap:10px; margin:20px 0;}

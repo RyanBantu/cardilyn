@@ -1,8 +1,12 @@
 import { useEffect, useRef } from 'react'
 import './styles.css'
 import bodyHtml from './body.html?raw'
+import part13to17 from './part_13_17.html?raw'
+import part19to24 from './part_19_24.html?raw'
 import Disclaimer from './components/Disclaimer.jsx'
 import ContributionForm from './components/ContributionForm.jsx'
+import ArteryStageViewer from './components/ArteryStageViewer.jsx'
+import PlaqueShapesAndFlow from './components/PlaqueShapesAndFlow.jsx'
 
 function setPhase(phase) {
   const wrap = document.getElementById('cycle-wrap')
@@ -57,6 +61,25 @@ function toggleAutoplay() {
   else startAutoplay()
 }
 
+function setupChapterToggle(detailsId, contentId, onOpen) {
+  const details = document.getElementById(detailsId)
+  const content = document.getElementById(contentId)
+  if (!details || !content) return () => {}
+
+  function sync() {
+    const open = details.open
+    content.hidden = !open
+    if (onOpen && open) onOpen(content)
+    if (open) {
+      content.querySelectorAll('.reveal:not(.revealed)').forEach((el) => el.classList.add('revealed'))
+    }
+  }
+
+  details.addEventListener('toggle', sync)
+  sync()
+  return () => details.removeEventListener('toggle', sync)
+}
+
 function setupIntroToggle() {
   const details = document.getElementById('toc-intro')
   const content = document.getElementById('chapter-intro-content')
@@ -74,6 +97,10 @@ function setupIntroToggle() {
   details.addEventListener('toggle', sync)
   sync()
   return () => details.removeEventListener('toggle', sync)
+}
+
+function setupCalcificationsToggle() {
+  return setupChapterToggle('toc-calcifications', 'chapter-calcifications-content')
 }
 
 function setupScrollSpy() {
@@ -138,6 +165,7 @@ export default function App() {
     setPhase('systole')
 
     cleanupRef.current.push(setupIntroToggle())
+    cleanupRef.current.push(setupCalcificationsToggle())
     cleanupRef.current.push(setupScrollSpy())
     cleanupRef.current.push(setupRevealAnimations())
 
@@ -155,6 +183,20 @@ export default function App() {
       <Disclaimer />
       <div className="wrap">
         <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+        <div id="chapter-calcifications-content" className="chapter-content" hidden>
+          <header id="chapter-calcifications" className="chapter-head">
+            <div className="chapter-label">Chapter 2</div>
+            <h2 className="chapter-title">Calcifications</h2>
+            <p className="chapter-desc">
+              Where the calcium in a coronary calcium score comes from — from cholesterol and bile
+              through the atherosclerosis cascade to deposits in arteries, valves, and muscle.
+            </p>
+          </header>
+          <div dangerouslySetInnerHTML={{ __html: part13to17 }} />
+          <ArteryStageViewer />
+          <div dangerouslySetInnerHTML={{ __html: part19to24 }} />
+          <PlaqueShapesAndFlow />
+        </div>
         <ContributionForm />
         <footer className="site-footer">
           <p className="footer-disclaimer">

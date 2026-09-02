@@ -1,0 +1,100 @@
+<section id="calc-intro">
+    <div class="num">2.1</div>
+    <h2>What is calcification?</h2>
+    <p class="lede">Everything below traces where the calcium in "coronary calcium score" actually comes from — starting with cholesterol, ending with calcium deposited in artery walls, valves, or muscle.</p>
+    <p><b>Calcification</b> is the body depositing calcium into tissue. In the heart, it comes in two biologically different forms:</p>
+    <ul class="plain">
+      <li class="coral"><b>Dystrophic calcification</b> — calcium depositing into tissue that's already damaged, dying, or chronically inflamed, even though blood calcium levels are completely normal. This is the mechanism behind coronary artery calcification, valve calcification, and post-heart-attack scar calcification.</li>
+      <li class="teal"><b>Metastatic calcification</b> — calcium depositing into otherwise-healthy tissue because blood calcium or phosphate levels are abnormally high (seen in kidney failure or severe hormone disorders). Less common in the heart, but can compound the dystrophic process in people with chronic kidney disease.</li>
+    </ul>
+    <p>Almost everything discussed in this section is the <b>dystrophic</b> type — the body reacting to damage, not to a calcium overload in the blood.</p>
+  </section>
+
+  <!-- 14 LDL AND THE ENDOTHELIUM -->
+  <section id="ldl-endothelium">
+    <div class="num">2.2</div>
+    <h2>LDL cholesterol and the endothelium</h2>
+    <p><b>LDL (low-density lipoprotein)</b> is a particle that carries cholesterol from the liver to the rest of the body, where cells use it to build membranes and hormones. The <b>endothelium</b> is the single-cell-thick lining inside every blood vessel — normally smooth, selective, and resistant to blood cells sticking to it.</p>
+    <p>The trouble starts when the endothelium is already stressed — by high blood pressure, smoking, high blood sugar, or inflammation. At that damaged spot, LDL slips through into the vessel wall, gets chemically <b>oxidized</b>, and is recognized by the immune system as a threat. White blood cells rush in, gorge on the oxidized LDL, and become swollen "foam cells" — the earliest visible building block of plaque. This cycle feeds itself: more damage lets in more LDL, which causes more damage.</p>
+  </section>
+
+  <!-- 15 HOW LDL FORMS -->
+  <section id="ldl-formation">
+    <div class="num">2.3</div>
+    <h2>How LDL is produced, step by step</h2>
+    <p>LDL isn't made directly — it's the end product of the liver's fat-export particle being progressively stripped down as it circulates.</p>
+    <div class="diagram-card">
+      <div class="flowchain">
+        <div class="fc-box" style="background:#1B2A35; border:1px solid var(--deoxy-dim)">Liver</div>
+        <div class="fc-connector"><div class="line"></div><div class="fc-label">assembles VLDL with apoB-100</div></div>
+        <div class="fc-box" style="background:#1B2A35; border:1px solid var(--deoxy-dim)">VLDL</div>
+        <div class="fc-connector"><div class="line"></div><div class="fc-label">LPL + GPIHBP1 strip triglycerides</div><div class="line"></div></div>
+        <div class="fc-box" style="background:#12251F; border:1px solid var(--lung-dim)">IDL</div>
+        <div class="fc-connector"><div class="line"></div><div class="fc-label">further triglyceride loss</div></div>
+        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">LDL</div>
+        <div class="fc-connector"><div class="line"></div><div class="fc-label">binds LDL receptors on cells</div></div>
+      </div>
+      <div class="cap">Liver → VLDL → (LPL + GPIHBP1 at capillary walls) → IDL → LDL</div>
+    </div>
+    <p>Each step matters: <b>VLDL</b> carries the liver's exported triglycerides and cholesterol. <b>LPL (lipoprotein lipase)</b>, anchored onto capillary walls by <b>GPIHBP1</b>, strips out triglycerides for tissues to burn or store — the same enzyme system that processes dietary fat from chylomicrons, described next. As VLDL loses triglycerides it becomes <b>IDL</b>, then finally <b>LDL</b> — small, dense, and cholesterol-rich.</p>
+  </section>
+
+  <!-- 16 CHYLOMICRONS, TRIGLYCERIDES, LPL, GPIHBP1 -->
+  <section id="chylomicrons">
+    <div class="num">2.4</div>
+    <h2>Chylomicrons, triglycerides, and the fat transport system</h2>
+    <ul class="plain">
+      <li class="coral"><b>Triglyceride</b> — the body's main storage form of fat: one glycerol backbone with three fatty acid chains attached. Dense in energy, easy to store, easy to break back down when needed.</li>
+      <li class="coral"><b>Chylomicron</b> — the largest lipoprotein particle, built by intestinal cells right after a fatty meal to carry dietary triglycerides into the lymphatic system and then the bloodstream.</li>
+      <li class="teal"><b>Lipoprotein lipase (LPL)</b> — the enzyme that hydrolyzes triglycerides inside chylomicrons and VLDL into free fatty acids, letting nearby muscle and fat tissue absorb them.</li>
+      <li class="teal"><b>GPIHBP1</b> — an anchor protein embedded in capillary walls that captures LPL (made inside muscle/fat cells) and holds it in place on the blood-facing surface, where it can actually reach passing lipoprotein particles.</li>
+    </ul>
+    <p>Together, these four pieces explain both halves of fat transport: chylomicrons handle fat fresh from a meal, VLDL handles the liver's own recycled fat, and both are processed by the same LPL/GPIHBP1 machinery sitting on capillary walls.</p>
+  </section>
+
+  <!-- 17 BILE -->
+  <section id="bile">
+    <div class="num">2.5</div>
+    <h2>Bile and the enterohepatic loop</h2>
+    <p>Bile plays two roles: helping absorb fat, and acting as one of the body's only real export routes for excess cholesterol.</p>
+    <div class="diagram-card">
+      <svg viewBox="0 0 680 440" role="img">
+        <title>Bile production, fat digestion, and the enterohepatic recycling loop</title>
+        <desc>Shows the liver producing bile acids, released into the intestine to emulsify fat, with most bile acids reabsorbed and recycled and a small portion excreted taking cholesterol with it.</desc>
+        <defs><marker id="bileArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+        <rect x="210" y="20" width="260" height="56" rx="8" fill="#1B2A35" stroke="var(--deoxy-dim)"/>
+        <text x="340" y="40" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Liver</text>
+        <text x="340" y="60" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Converts cholesterol to bile acids</text>
+        <line x1="340" y1="76" x2="340" y2="116" stroke="var(--muted)" stroke-width="2" marker-end="url(#bileArrow)"/>
+
+        <rect x="210" y="116" width="260" height="56" rx="8" fill="#332508" stroke="#7A5510"/>
+        <text x="340" y="136" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Bile acids</text>
+        <text x="340" y="156" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Released into the intestine</text>
+        <line x1="340" y1="172" x2="340" y2="212" stroke="var(--muted)" stroke-width="2" marker-end="url(#bileArrow)"/>
+
+        <rect x="210" y="212" width="260" height="56" rx="8" fill="#12251F" stroke="var(--lung-dim)"/>
+        <text x="340" y="232" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Intestine</text>
+        <text x="340" y="252" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Emulsifies fat, aids absorption</text>
+
+        <path d="M340,268 L340,288 L220,288 L220,308" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#bileArrow)"/>
+        <path d="M340,268 L340,288 L460,288 L460,308" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#bileArrow)"/>
+
+        <rect x="110" y="308" width="220" height="56" rx="8" fill="#1B2A35" stroke="var(--deoxy-dim)"/>
+        <text x="220" y="328" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Reabsorbed (~95%)</text>
+        <text x="220" y="348" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Recycled back to the liver</text>
+
+        <rect x="350" y="308" width="220" height="56" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <text x="460" y="328" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Excreted (~5%)</text>
+        <text x="460" y="348" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Removes cholesterol permanently</text>
+
+        <path d="M110,336 C40,336 40,48 208,48" fill="none" stroke="var(--deoxy)" stroke-width="1.5" marker-end="url(#bileArrow)"/>
+        <text x="46" y="190" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle">recycled</text>
+      </svg>
+      <div class="cap">The recycling loop is efficient by default — which is exactly why it doesn't remove much cholesterol unless something (fiber, medication) blocks reabsorption.</div>
+    </div>
+    <p>Fiber and bile acid sequestrant medications work by blocking that reabsorption step: fewer bile acids return to the liver, so the liver pulls more cholesterol from the blood to make replacements — indirectly lowering LDL.</p>
+  </section>
+
+  <!-- 18 INTERACTIVE ARTERY STAGES -->
+  

@@ -5,6 +5,7 @@ const TOPICS = [
   'Valves & cardiac cycle',
   'Coronary arteries',
   'Cardiac veins',
+  'Calcifications',
   'Clinical context',
   'Correction or clarification',
   'Other',
