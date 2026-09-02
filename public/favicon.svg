@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Cardilyn">
+  <rect width="100" height="100" rx="22" fill="#FFF0F4"/>
+  <defs>
+    <linearGradient id="heart" x1="50" y1="24" x2="50" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF7BAC"/>
+      <stop offset="1" stop-color="#E8437A"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#heart)" d="M50 26c0 0-22 16-22 38 0 14 11 22 22 28 11-6 22-14 22-28 0-22-22-38-22-38z"/>
+  <path fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" d="M22 52h9l4-11 6 20 6-16 6 7h19"/>
+</svg>
