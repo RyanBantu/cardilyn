@@ -13,7 +13,7 @@
         <path d="M380,210 L380,80 L500,80" fill="none" stroke="var(--lung)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M500,80 L620,150 L620,210 L760,210" fill="none" stroke="var(--oxy)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
-        <circle r="7" fill="#EFEFEA">
+        <circle r="7" fill="#1C211E">
           <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
             <mpath href="#flowpath"/>
           </animateMotion>
@@ -126,14 +126,14 @@
         <rect x="140" y="60" width="400" height="460" rx="40" fill="none" stroke="var(--hair)" stroke-width="1"/>
 
         <g>
-          <rect x="150" y="90" width="170" height="420" rx="24" fill="#1B2A35" stroke="var(--deoxy-dim)" stroke-width="1"/>
+          <rect x="150" y="90" width="170" height="420" rx="24" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)" stroke-width="1"/>
           <line x1="150" y1="290" x2="320" y2="290" stroke="var(--hair)" stroke-width="1" stroke-dasharray="4 4"/>
           <text x="235" y="185" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Right atrium</text>
           <text x="235" y="410" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Right ventricle</text>
         </g>
 
         <g>
-          <rect x="360" y="90" width="170" height="420" rx="24" fill="#33201A" stroke="var(--oxy-dim)" stroke-width="1"/>
+          <rect x="360" y="90" width="170" height="420" rx="24" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)" stroke-width="1"/>
           <line x1="360" y1="290" x2="530" y2="290" stroke="var(--hair)" stroke-width="1" stroke-dasharray="4 4"/>
           <text x="445" y="185" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Left atrium</text>
           <text x="445" y="410" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Left ventricle</text>
@@ -144,16 +144,16 @@
         <!-- coronary arteries, mapped onto the chamber layout -->
         <line x1="340" y1="82" x2="340" y2="102" stroke="#7F77DD" stroke-width="4" stroke-linecap="round"/>
         <path d="M340,102 C338,230 340,370 338,500" fill="none" stroke="#7F77DD" stroke-width="3" stroke-linecap="round"/>
-        <path d="M342,200 L400,220" fill="none" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M342,280 L400,300" fill="none" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M342,360 L400,380" fill="none" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M342,200 L400,220" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M342,280 L400,300" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M342,360 L400,380" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
 
         <path d="M340,100 C400,90 480,110 520,180 C535,260 525,350 490,430" fill="none" stroke="var(--oxy)" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M505,220 L455,240" fill="none" stroke="#F0997B" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M505,220 L455,240" fill="none" stroke="var(--oxy)" stroke-width="1.5" stroke-linecap="round"/>
 
         <path d="M310,95 C230,90 155,120 150,200 C145,280 150,380 180,460" fill="none" stroke="var(--lung)" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M180,460 C220,490 280,500 335,505" fill="none" stroke="var(--lung-dim)" stroke-width="2" stroke-linecap="round"/>
-        <path d="M155,350 L215,370" fill="none" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M180,460 C220,490 280,500 335,505" fill="none" stroke="var(--diagram-lung-stroke)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M155,350 L215,370" fill="none" stroke="var(--lung)" stroke-width="1.5" stroke-linecap="round"/>
 
         <!-- valve markers -->
         <circle cx="235" cy="290" r="7" fill="var(--bg)" stroke="var(--ink)" stroke-width="1"/>
@@ -182,27 +182,27 @@
 
     <div class="diagram-card">
       <div class="flowchain">
-        <div class="fc-box" style="background:#1B2A35; border:1px solid var(--deoxy-dim)">Vena cava</div>
+        <div class="fc-box" style="background:var(--diagram-deoxy); border:1px solid var(--diagram-deoxy-stroke)">Vena cava</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#1B2A35; border:1px solid var(--deoxy-dim)">Right atrium</div>
+        <div class="fc-box" style="background:var(--diagram-deoxy); border:1px solid var(--diagram-deoxy-stroke)">Right atrium</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">Tricuspid valve</div><div class="line"></div></div>
-        <div class="fc-box" style="background:#1B2A35; border:1px solid var(--deoxy-dim)">Right ventricle</div>
+        <div class="fc-box" style="background:var(--diagram-deoxy); border:1px solid var(--diagram-deoxy-stroke)">Right ventricle</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">Pulmonary valve</div><div class="line"></div></div>
-        <div class="fc-box" style="background:#1B2A35; border:1px solid var(--deoxy-dim)">Pulmonary artery</div>
+        <div class="fc-box" style="background:var(--diagram-deoxy); border:1px solid var(--diagram-deoxy-stroke)">Pulmonary artery</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#12251F; border:1px solid var(--lung-dim)">Lungs (gas exchange)</div>
+        <div class="fc-box" style="background:var(--diagram-lung); border:1px solid var(--diagram-lung-stroke)">Lungs (gas exchange)</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">Pulmonary veins</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">Pulmonary veins</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">Left atrium</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">Left atrium</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">Mitral valve</div><div class="line"></div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">Left ventricle</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">Left ventricle</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">Aortic valve</div><div class="line"></div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">Aorta</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">Aorta</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">splits at the aortic root</div></div>
         <div class="fc-split">
-          <div class="fc-box" style="background:#291B37; border:1px solid #3C3489">LMCA</div>
-          <div class="fc-box" style="background:#0B2A22; border:1px solid var(--lung-dim)">RCA</div>
+          <div class="fc-box" style="background:var(--diagram-purple); border:1px solid var(--diagram-purple-stroke)">LMCA</div>
+          <div class="fc-box" style="background:var(--diagram-lung); border:1px solid var(--diagram-lung-stroke)">RCA</div>
         </div>
       </div>
       <div class="cap">Full path: vena cava → right heart → lungs → left heart → aorta → coronary arteries. See sections 1.7, 1.8, and 1.10 for each leg in detail, and section 1.10/1.11 for how LMCA and RCA branch further.</div>
@@ -235,14 +235,14 @@
         <rect x="140" y="60" width="400" height="460" rx="40" fill="none" stroke="var(--hair)" stroke-width="1"/>
 
         <g>
-          <rect x="150" y="90" width="170" height="440" rx="24" fill="#1B2A35" stroke="var(--deoxy-dim)" stroke-width="1"/>
+          <rect x="150" y="90" width="170" height="440" rx="24" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)" stroke-width="1"/>
           <line x1="150" y1="290" x2="320" y2="290" stroke="var(--hair)" stroke-width="1" stroke-dasharray="4 4"/>
           <text x="235" y="185" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Right atrium</text>
           <text x="235" y="410" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Right ventricle</text>
         </g>
 
         <g>
-          <rect x="360" y="90" width="170" height="440" rx="24" fill="#33201A" stroke="var(--oxy-dim)" stroke-width="2"/>
+          <rect x="360" y="90" width="170" height="440" rx="24" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)" stroke-width="2"/>
           <line x1="360" y1="290" x2="530" y2="290" stroke="var(--hair)" stroke-width="1" stroke-dasharray="4 4"/>
           <text x="445" y="185" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Left atrium</text>
           <text x="445" y="410" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle">Left ventricle</text>
@@ -363,15 +363,15 @@
           <marker id="da1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--deoxy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
           <marker id="da2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--lung)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
         </defs>
-        <rect x="10" y="30" width="110" height="48" rx="8" fill="#1B2A35" stroke="var(--deoxy-dim)"/>
+        <rect x="10" y="30" width="110" height="48" rx="8" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)"/>
         <text x="65" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Vena cava</text>
-        <rect x="140" y="30" width="110" height="48" rx="8" fill="#1B2A35" stroke="var(--deoxy-dim)"/>
+        <rect x="140" y="30" width="110" height="48" rx="8" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)"/>
         <text x="195" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Right atrium</text>
-        <rect x="270" y="30" width="110" height="48" rx="8" fill="#1B2A35" stroke="var(--deoxy-dim)"/>
+        <rect x="270" y="30" width="110" height="48" rx="8" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)"/>
         <text x="325" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Right ventricle</text>
-        <rect x="400" y="30" width="140" height="48" rx="8" fill="#1B2A35" stroke="var(--deoxy-dim)"/>
+        <rect x="400" y="30" width="140" height="48" rx="8" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)"/>
         <text x="470" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Pulmonary artery</text>
-        <rect x="560" y="30" width="130" height="48" rx="8" fill="#12251F" stroke="var(--lung-dim)"/>
+        <rect x="560" y="30" width="130" height="48" rx="8" fill="var(--diagram-lung)" stroke="var(--diagram-lung-stroke)"/>
         <text x="625" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Lungs</text>
 
         <line x1="120" y1="54" x2="138" y2="54" stroke="var(--deoxy)" stroke-width="2" marker-end="url(#da1)"/>
@@ -407,15 +407,15 @@
           <marker id="db1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--lung)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
           <marker id="db2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--oxy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
         </defs>
-        <rect x="10" y="30" width="100" height="48" rx="8" fill="#12251F" stroke="var(--lung-dim)"/>
+        <rect x="10" y="30" width="100" height="48" rx="8" fill="var(--diagram-lung)" stroke="var(--diagram-lung-stroke)"/>
         <text x="60" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Lungs</text>
-        <rect x="130" y="30" width="150" height="48" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="130" y="30" width="150" height="48" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="205" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Pulmonary veins</text>
-        <rect x="300" y="30" width="130" height="48" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="300" y="30" width="130" height="48" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="365" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Left atrium</text>
-        <rect x="450" y="30" width="140" height="48" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="450" y="30" width="140" height="48" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="520" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Left ventricle</text>
-        <rect x="610" y="30" width="80" height="48" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="610" y="30" width="80" height="48" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="650" y="54" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Aorta</text>
 
         <line x1="110" y1="54" x2="128" y2="54" stroke="var(--lung)" stroke-width="2" marker-end="url(#db1)"/>
@@ -461,15 +461,15 @@
         <defs>
           <marker id="dc1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--oxy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
         </defs>
-        <rect x="285" y="20" width="130" height="48" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="285" y="20" width="130" height="48" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="350" y="44" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Aorta</text>
 
         <path d="M350,68 L350,90 L210,90 L210,110" fill="none" stroke="var(--oxy)" stroke-width="2" marker-end="url(#dc1)"/>
         <path d="M350,68 L350,90 L490,90 L490,110" fill="none" stroke="var(--oxy)" stroke-width="2" marker-end="url(#dc1)"/>
 
-        <rect x="140" y="110" width="140" height="48" rx="8" fill="#291B37" stroke="#3C3489"/>
+        <rect x="140" y="110" width="140" height="48" rx="8" fill="var(--diagram-purple)" stroke="var(--diagram-purple-stroke)"/>
         <text x="210" y="134" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">LMCA</text>
-        <rect x="420" y="110" width="140" height="48" rx="8" fill="#0B2A22" stroke="var(--lung-dim)"/>
+        <rect x="420" y="110" width="140" height="48" rx="8" fill="var(--diagram-lung)" stroke="var(--diagram-lung-stroke)"/>
         <text x="490" y="134" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">RCA</text>
       </svg>
       <div class="cap">Blood leaves the aortic root, immediately above the aortic valve, and splits into the LMCA and RCA, the heart's own arterial supply.</div>
@@ -477,19 +477,19 @@
 
     <div class="diagram-card">
       <svg viewBox="0 0 680 620">
-        <path d="M200,100 C150,60 260,40 340,80 C420,40 530,60 480,100 C520,160 500,300 460,380 C430,460 380,520 340,540 C300,520 250,460 220,380 C180,300 160,160 200,100 Z" fill="#1B2620" stroke="var(--hair)" stroke-width="1"/>
+        <path d="M200,100 C150,60 260,40 340,80 C420,40 530,60 480,100 C520,160 500,300 460,380 C430,460 380,520 340,540 C300,520 250,460 220,380 C180,300 160,160 200,100 Z" fill="var(--diagram-heart)" stroke="var(--hair)" stroke-width="1"/>
 
         <line x1="340" y1="85" x2="340" y2="105" stroke="var(--deoxy)" stroke-width="4" stroke-linecap="round"/>
         <path d="M340,105 C335,250 340,400 340,510" fill="none" stroke="#7F77DD" stroke-width="3" stroke-linecap="round"/>
-        <path d="M338,200 L280,230" fill="none" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M338,280 L270,310" fill="none" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M338,360 L275,390" fill="none" stroke="#AFA9EC" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M340,100 C315,120 302,160 305,205" fill="none" stroke="#85B7EB" stroke-width="2" stroke-linecap="round"/>
+        <path d="M338,200 L280,230" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M338,280 L270,310" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M338,360 L275,390" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M340,100 C315,120 302,160 305,205" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
         <path d="M340,100 C260,110 200,160 195,260 C190,340 210,420 250,470" fill="none" stroke="var(--oxy)" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M200,300 L250,320" fill="none" stroke="#F0997B" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M200,300 L250,320" fill="none" stroke="var(--oxy)" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M380,95 C440,110 470,180 465,280 C460,360 440,440 400,480" fill="none" stroke="var(--lung)" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M400,480 C370,500 350,510 340,515" fill="none" stroke="var(--lung-dim)" stroke-width="2" stroke-linecap="round"/>
-        <path d="M430,400 L390,430" fill="none" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M400,480 C370,500 350,510 340,515" fill="none" stroke="var(--diagram-lung-stroke)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M430,400 L390,430" fill="none" stroke="var(--lung)" stroke-width="1.5" stroke-linecap="round"/>
 
         <g font-family="IBM Plex Mono" font-size="12" fill="var(--muted)">
           <line x1="342" y1="90" x2="120" y2="50" stroke="var(--hair)"/>
@@ -549,18 +549,18 @@
 
     <div class="diagram-card">
       <svg viewBox="0 0 680 600">
-        <path d="M200,100 C150,60 260,40 340,80 C420,40 530,60 480,100 C520,160 500,300 460,380 C430,460 380,520 340,540 C300,520 250,460 220,380 C180,300 160,160 200,100 Z" fill="#1B2620" stroke="var(--hair)" stroke-width="1"/>
+        <path d="M200,100 C150,60 260,40 340,80 C420,40 530,60 480,100 C520,160 500,300 460,380 C430,460 380,520 340,540 C300,520 250,460 220,380 C180,300 160,160 200,100 Z" fill="var(--diagram-heart)" stroke="var(--hair)" stroke-width="1"/>
 
         <path d="M352,110 C347,250 352,400 352,505" fill="none" stroke="var(--deoxy)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 5"/>
         <path d="M352,505 C300,510 235,485 215,405 C200,345 200,300 205,270" fill="none" stroke="var(--deoxy)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 5"/>
         <path d="M205,270 C200,205 215,145 240,110" fill="none" stroke="var(--deoxy)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 5"/>
 
-        <path d="M352,505 C378,498 400,485 415,468" fill="none" stroke="#5DA6D6" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
-        <path d="M415,468 C445,435 462,375 462,300" fill="none" stroke="#8FC3E8" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="6 5"/>
-        <path d="M462,300 C458,220 430,150 385,112" fill="none" stroke="#8FC3E8" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="6 5"/>
+        <path d="M352,505 C378,498 400,485 415,468" fill="none" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+        <path d="M415,468 C445,435 462,375 462,300" fill="none" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="6 5"/>
+        <path d="M462,300 C458,220 430,150 385,112" fill="none" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="6 5"/>
 
-        <path d="M460,220 L400,175" fill="none" stroke="var(--deoxy-dim)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
-        <path d="M460,160 L395,130" fill="none" stroke="var(--deoxy-dim)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+        <path d="M460,220 L400,175" fill="none" stroke="var(--diagram-deoxy-stroke)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+        <path d="M460,160 L395,130" fill="none" stroke="var(--diagram-deoxy-stroke)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
 
         <circle cx="240" cy="110" r="5" fill="var(--bg)" stroke="var(--deoxy)" stroke-width="1.5"/>
         <text x="240" y="95" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle">→ RA</text>
@@ -606,8 +606,8 @@
 
     <div class="diagram-card phase-systole" id="cycle-wrap">
       <svg viewBox="0 0 680 280">
-        <rect x="120" y="40" width="200" height="200" rx="20" fill="#1E2C39" stroke="var(--deoxy-dim)"/>
-        <rect x="360" y="40" width="200" height="200" rx="20" fill="#2E1E1A" stroke="var(--oxy-dim)"/>
+        <rect x="120" y="40" width="200" height="200" rx="20" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)"/>
+        <rect x="360" y="40" width="200" height="200" rx="20" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="220" y="70" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle">Right ventricle</text>
         <text x="460" y="70" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle">Left ventricle</text>
 

@@ -43,8 +43,8 @@ export default function PlaqueShapesAndFlow() {
           </defs>
 
           <circle cx="140" cy="150" r="80" fill="none" stroke="var(--hair)" strokeWidth="1" />
-          <circle cx="140" cy="150" r="65" fill="#332508" />
-          <circle cx="140" cy="150" r="38" fill="var(--oxy-dim)" />
+          <circle cx="140" cy="150" r="65" fill="var(--diagram-calc)" />
+          <circle cx="140" cy="150" r="38" fill="var(--diagram-lumen)" />
           <line x1="128" y1="185" x2="128" y2="115" stroke="#D85A30" strokeWidth="2" markerEnd="url(#pgArrow)" />
           <line x1="140" y1="185" x2="140" y2="115" stroke="#D85A30" strokeWidth="2" markerEnd="url(#pgArrow)" />
           <line x1="152" y1="185" x2="152" y2="115" stroke="#D85A30" strokeWidth="2" markerEnd="url(#pgArrow)" />
@@ -52,18 +52,18 @@ export default function PlaqueShapesAndFlow() {
           <text x="140" y="270" fontFamily="IBM Plex Mono" fontSize="12" fill="var(--muted)" textAnchor="middle">Narrows evenly all around</text>
 
           <circle cx="340" cy="150" r="80" fill="none" stroke="var(--hair)" strokeWidth="1" />
-          <circle cx="340" cy="150" r="60" fill="var(--oxy-dim)" />
-          <path d="M374,101 A60,60 0 0,1 374,199 A22,22 0 0,0 374,101 Z" fill="#332508" />
+          <circle cx="340" cy="150" r="60" fill="var(--diagram-lumen)" />
+          <path d="M374,101 A60,60 0 0,1 374,199 A22,22 0 0,0 374,101 Z" fill="var(--diagram-calc)" />
           <line x1="312" y1="185" x2="312" y2="115" stroke="#D85A30" strokeWidth="2" markerEnd="url(#pgArrow)" />
           <line x1="326" y1="185" x2="326" y2="115" stroke="#D85A30" strokeWidth="2" markerEnd="url(#pgArrow)" />
           <text x="340" y="252" fontFamily="Inter" fontWeight="500" fontSize="14" fill="var(--ink)" textAnchor="middle">Eccentric</text>
           <text x="340" y="270" fontFamily="IBM Plex Mono" fontSize="12" fill="var(--muted)" textAnchor="middle">Bulges in from one side</text>
 
           <circle cx="540" cy="150" r="80" fill="none" stroke="var(--hair)" strokeWidth="1" />
-          <circle cx="540" cy="150" r="62" fill="var(--oxy-dim)" />
-          <polygon points="555,122 575,130 578,150 565,165 545,158 542,138" fill="#332508" />
-          <circle cx="558" cy="136" r="3" fill="#F2C879" />
-          <circle cx="565" cy="150" r="3" fill="#F2C879" />
+          <circle cx="540" cy="150" r="62" fill="var(--diagram-lumen)" />
+          <polygon points="555,122 575,130 578,150 565,165 545,158 542,138" fill="var(--diagram-calc)" />
+          <circle cx="558" cy="136" r="3" fill="var(--diagram-calc-stroke)" />
+          <circle cx="565" cy="150" r="3" fill="var(--diagram-calc-stroke)" />
           <line x1="518" y1="185" x2="518" y2="115" stroke="#D85A30" strokeWidth="2" markerEnd="url(#pgArrow)" />
           <line x1="532" y1="185" x2="528" y2="140" stroke="#D85A30" strokeWidth="1.5" markerEnd="url(#pgArrow)" opacity="0.7" />
           <text x="540" y="252" fontFamily="Inter" fontWeight="500" fontSize="14" fill="var(--ink)" textAnchor="middle">Nodular</text>
@@ -105,8 +105,8 @@ export default function PlaqueShapesAndFlow() {
 
           <path
             d={`M280,180 Q340,${peakY} 400,180`}
-            fill="#332508"
-            stroke="#7A5510"
+            fill="var(--diagram-calc)"
+            stroke="var(--diagram-calc-stroke)"
             strokeWidth="0.5"
           />
 

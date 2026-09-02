@@ -64,8 +64,8 @@ export default function ArteryStageViewer() {
           viewBox="0 0 300 300"
           style={{ maxWidth: 300, margin: '0 auto', display: 'block' }}
         >
-          <circle cx="150" cy="150" r="100" fill="#2A241A" stroke="var(--hair)" strokeWidth="1" />
-          <circle cx="150" cy="150" r="86" fill="#33201A" />
+          <circle cx="150" cy="150" r="100" fill="var(--diagram-wall)" stroke="var(--hair)" strokeWidth="1" />
+          <circle cx="150" cy="150" r="86" fill="var(--diagram-lumen)" />
           <circle
             cx="150"
             cy="150"
@@ -86,12 +86,12 @@ export default function ArteryStageViewer() {
           />
           <path
             d="M193,75.5 A86,86 0 0,1 193,224.5 A50,50 0 0,0 193,75.5 Z"
-            fill="#7A5510"
+            fill="var(--diagram-plaque)"
             style={{ opacity: s.plaque }}
           />
-          <circle cx="175" cy="112" r="4" fill="#FAEEDA" style={{ opacity: s.calc }} />
-          <circle cx="182" cy="150" r="4.5" fill="#FAEEDA" style={{ opacity: s.calc }} />
-          <circle cx="175" cy="188" r="4" fill="#FAEEDA" style={{ opacity: s.calc }} />
+          <circle cx="175" cy="112" r="4" fill="var(--diagram-calc-stroke)" style={{ opacity: s.calc }} />
+          <circle cx="182" cy="150" r="4.5" fill="var(--diagram-calc-stroke)" style={{ opacity: s.calc }} />
+          <circle cx="175" cy="188" r="4" fill="var(--diagram-calc-stroke)" style={{ opacity: s.calc }} />
         </svg>
       </div>
     </section>

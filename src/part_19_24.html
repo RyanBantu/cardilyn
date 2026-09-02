@@ -4,17 +4,17 @@
     <p>Every stage from the first spark of endothelial injury to a measurable calcium score, chained together.</p>
     <div class="diagram-card">
       <div class="flowchain">
-        <div class="fc-box" style="background:#241F16; border:1px solid var(--hair)">Risk factors</div>
+        <div class="fc-box" style="background:var(--diagram-neutral); border:1px solid var(--hair)">Risk factors</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">high LDL, blood pressure, smoking</div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">Endothelial injury</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">Endothelial injury</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">LDL oxidation, foam cells</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">LDL oxidation, foam cells</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#33201A; border:1px solid var(--oxy-dim)">Fatty plaque forms</div>
+        <div class="fc-box" style="background:var(--diagram-oxy); border:1px solid var(--diagram-oxy-stroke)">Fatty plaque forms</div>
         <div class="fc-connector"><div class="line"></div></div>
-        <div class="fc-box" style="background:#332508; border:1px solid #7A5510">Calcification begins</div>
+        <div class="fc-box" style="background:var(--diagram-calc); border:1px solid var(--diagram-calc-stroke)">Calcification begins</div>
         <div class="fc-connector"><div class="line"></div><div class="fc-label">longer plaque exists, more calcium</div></div>
-        <div class="fc-box" style="background:#332508; border:1px solid #7A5510">Calcium accumulates</div>
+        <div class="fc-box" style="background:var(--diagram-calc); border:1px solid var(--diagram-calc-stroke)">Calcium accumulates</div>
       </div>
       <div class="cap">This is exactly what a coronary calcium score measures — cumulative lifetime plaque burden, not necessarily today's inflammation level.</div>
     </div>
@@ -30,19 +30,19 @@
         <desc>Shows lipid levels and vascular stress feeding plaque formation, and metabolic risk and age feeding faster plaque aging, converging into a higher overall calcification buildup.</desc>
         <defs><marker id="accArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 
-        <rect x="20" y="20" width="150" height="56" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="20" y="20" width="150" height="56" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="95" y="40" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Lipid levels</text>
         <text x="95" y="60" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">More LDL circulating</text>
 
-        <rect x="185" y="20" width="150" height="56" rx="8" fill="#33201A" stroke="var(--oxy-dim)"/>
+        <rect x="185" y="20" width="150" height="56" rx="8" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)"/>
         <text x="260" y="40" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Vascular stress</text>
         <text x="260" y="60" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">High BP, smoking</text>
 
-        <rect x="350" y="20" width="150" height="56" rx="8" fill="#332508" stroke="#7A5510"/>
+        <rect x="350" y="20" width="150" height="56" rx="8" fill="var(--diagram-calc)" stroke="var(--diagram-calc-stroke)"/>
         <text x="425" y="40" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Metabolic risk</text>
         <text x="425" y="60" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Diabetes, obesity</text>
 
-        <rect x="515" y="20" width="150" height="56" rx="8" fill="#332508" stroke="#7A5510"/>
+        <rect x="515" y="20" width="150" height="56" rx="8" fill="var(--diagram-calc)" stroke="var(--diagram-calc-stroke)"/>
         <text x="590" y="40" font-family="Inter" font-weight="500" font-size="13" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Age &amp; time</text>
         <text x="590" y="60" font-family="IBM Plex Mono" font-size="11" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">Advancing age</text>
 
@@ -51,7 +51,7 @@
         <path d="M425,76 L425,150 L400,150 L400,180" fill="none" stroke="var(--muted)" stroke-width="1.5" marker-end="url(#accArrow)"/>
         <path d="M590,76 L590,130 L460,130 L460,180" fill="none" stroke="var(--muted)" stroke-width="1.5" marker-end="url(#accArrow)"/>
 
-        <rect x="195" y="180" width="300" height="64" rx="8" fill="#332508" stroke="#7A5510"/>
+        <rect x="195" y="180" width="300" height="64" rx="8" fill="var(--diagram-calc)" stroke="var(--diagram-calc-stroke)"/>
         <text x="345" y="202" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">Higher calcification buildup</text>
         <text x="345" y="224" font-family="IBM Plex Mono" font-size="12" fill="var(--muted)" text-anchor="middle" dominant-baseline="central">More LDL, more injury, more time</text>
       </svg>
@@ -100,14 +100,14 @@
       <svg viewBox="0 0 680 460" role="img">
         <title>Diagram showing where the three types of heart calcification occur</title>
         <desc>Shows coronary artery calcification on the artery surface, valvular calcification on the aortic valve, and myocardial calcification within the heart muscle itself.</desc>
-        <path d="M180,90 C140,60 230,45 300,75 C360,45 450,60 420,90 C450,140 435,260 405,330 C380,390 340,430 300,440 C260,430 220,390 195,330 C165,260 150,140 180,90 Z" fill="#1B2620" stroke="var(--hair)" stroke-width="1"/>
+        <path d="M180,90 C140,60 230,45 300,75 C360,45 450,60 420,90 C450,140 435,260 405,330 C380,390 340,430 300,440 C260,430 220,390 195,330 C165,260 150,140 180,90 Z" fill="var(--diagram-heart)" stroke="var(--hair)" stroke-width="1"/>
 
         <path d="M300,75 C260,110 250,220 248,300" fill="none" stroke="#D85A30" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="248" cy="230" r="10" fill="#33201A" stroke="var(--oxy-dim)" stroke-width="1"/>
+        <circle cx="248" cy="230" r="10" fill="var(--diagram-oxy)" stroke="var(--diagram-oxy-stroke)" stroke-width="1"/>
 
-        <circle cx="300" cy="80" r="9" fill="#1B2A35" stroke="var(--deoxy-dim)" stroke-width="1"/>
+        <circle cx="300" cy="80" r="9" fill="var(--diagram-deoxy)" stroke="var(--diagram-deoxy-stroke)" stroke-width="1"/>
 
-        <rect x="330" y="240" width="60" height="70" rx="10" fill="#332508" stroke="#7A5510" stroke-width="1"/>
+        <rect x="330" y="240" width="60" height="70" rx="10" fill="var(--diagram-calc)" stroke="var(--diagram-calc-stroke)" stroke-width="1"/>
 
         <line x1="248" y1="230" x2="560" y2="140" stroke="var(--hair)" stroke-dasharray="3 3"/>
         <text x="566" y="130" font-family="Inter" font-weight="500" font-size="14" fill="var(--ink)" text-anchor="start">Coronary artery</text>
