@@ -1,9 +1,11 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './styles.css'
 import bodyHtml from './body.html?raw'
 import part13to17 from './part_13_17.html?raw'
 import part19to24 from './part_19_24.html?raw'
 import Disclaimer from './components/Disclaimer.jsx'
+import NavBar from './components/NavBar.jsx'
+import Companion from './components/Companion.jsx'
 import ContributionForm from './components/ContributionForm.jsx'
 import ArteryStageViewer from './components/ArteryStageViewer.jsx'
 import PlaqueShapesAndFlow from './components/PlaqueShapesAndFlow.jsx'
@@ -154,8 +156,14 @@ function setupRevealAnimations() {
 
 export default function App() {
   const cleanupRef = useRef([])
+  const [view, setView] = useState('heart')
 
   useEffect(() => {
+    if (view !== 'heart') {
+      stopAutoplay()
+      return undefined
+    }
+
     window.setPhase = (phase) => {
       stopAutoplay()
       setPhase(phase)
@@ -176,28 +184,35 @@ export default function App() {
       cleanupRef.current.forEach((fn) => fn())
       cleanupRef.current = []
     }
-  }, [])
+  }, [view])
 
   return (
     <div className="site">
+      <NavBar active={view} onChange={setView} />
       <Disclaimer />
       <div className="wrap">
-        <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
-        <div id="chapter-calcifications-content" className="chapter-content" hidden>
-          <header id="chapter-calcifications" className="chapter-head">
-            <div className="chapter-label">Chapter 2</div>
-            <h2 className="chapter-title">Calcifications</h2>
-            <p className="chapter-desc">
-              Where the calcium in a coronary calcium score comes from — from cholesterol and bile
-              through the atherosclerosis cascade to deposits in arteries, valves, and muscle.
-            </p>
-          </header>
-          <div dangerouslySetInnerHTML={{ __html: part13to17 }} />
-          <ArteryStageViewer />
-          <div dangerouslySetInnerHTML={{ __html: part19to24 }} />
-          <PlaqueShapesAndFlow />
-        </div>
-        <ContributionForm />
+        {view === 'heart' ? (
+          <>
+            <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <div id="chapter-calcifications-content" className="chapter-content" hidden>
+              <header id="chapter-calcifications" className="chapter-head">
+                <div className="chapter-label">Chapter 2</div>
+                <h2 className="chapter-title">Calcifications</h2>
+                <p className="chapter-desc">
+                  Where the calcium in a coronary calcium score comes from — from cholesterol and bile
+                  through the atherosclerosis cascade to deposits in arteries, valves, and muscle.
+                </p>
+              </header>
+              <div dangerouslySetInnerHTML={{ __html: part13to17 }} />
+              <ArteryStageViewer />
+              <div dangerouslySetInnerHTML={{ __html: part19to24 }} />
+              <PlaqueShapesAndFlow />
+            </div>
+            <ContributionForm />
+          </>
+        ) : (
+          <Companion />
+        )}
         <footer className="site-footer">
           <p className="footer-disclaimer">
             Compiled through self-directed research · For education only · Not medical advice ·
