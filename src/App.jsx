@@ -135,7 +135,9 @@ function setupScrollSpy() {
 }
 
 function setupRevealAnimations() {
-  const targets = document.querySelectorAll('section, .hero, .flow-card, .chapter-head')
+  const targets = document.querySelectorAll(
+    'section:not(.contribute-section):not(.companion), .hero, .flow-card, .chapter-head'
+  )
   targets.forEach((el) => el.classList.add('reveal'))
 
   const observer = new IntersectionObserver(
@@ -151,7 +153,12 @@ function setupRevealAnimations() {
   )
 
   targets.forEach((el) => observer.observe(el))
-  return () => observer.disconnect()
+  return () => {
+    observer.disconnect()
+    targets.forEach((el) => {
+      el.classList.remove('reveal', 'revealed')
+    })
+  }
 }
 
 export default function App() {
@@ -219,7 +226,10 @@ export default function App() {
             Consult a cardiologist for any health concerns · Do not use for self-treatment
           </p>
           <p>
-            Contribute via{' '}
+            <a href="#contribute" className="email-link">
+              Contribute
+            </a>
+            {' · '}
             <a href="mailto:bantu.ryan@gmail.com" className="email-link">
               bantu.ryan@gmail.com
             </a>

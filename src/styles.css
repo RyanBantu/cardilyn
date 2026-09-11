@@ -157,6 +157,8 @@
   /* ---------- COMPANION ---------- */
   .companion{
     padding:56px 0 40px;
+    opacity:1 !important;
+    transform:none !important;
   }
   .companion-card{
     background:var(--panel);
@@ -689,6 +691,8 @@
   .contribute-section{
     padding:56px 0;
     border-top:1px solid var(--hair);
+    opacity:1 !important;
+    transform:none !important;
   }
   .email-link{
     color:var(--lung);

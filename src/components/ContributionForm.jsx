@@ -56,10 +56,10 @@ export default function ContributionForm() {
 
   return (
     <section id="contribute" className="contribute-section">
-      <h2>Contribute to this reference</h2>
+      <h2>Contribute</h2>
       <p className="lede">
-        Know something that should be added, corrected, or expanded — or have feedback about the
-        Cardilyn app? Share it below. Your submission goes directly to the maintainer at{' '}
+        Share an addition, correction, source, or app feedback below. It goes directly to the
+        maintainer at{' '}
         <a href={`mailto:${EMAIL}`} className="email-link">
           {EMAIL}
         </a>
