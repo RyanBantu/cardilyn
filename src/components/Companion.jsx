@@ -1,3 +1,6 @@
+import { useEffect, useRef, useState } from 'react'
+import AppShowcase from './AppShowcase.jsx'
+
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/DkeDea5t'
 
 const FEATURES = [
@@ -185,6 +188,8 @@ export default function Companion({ onLearnHeart }) {
           </p>
         </div>
       </section>
+
+      <AppShowcase />
 
       <section className="companion-sync" aria-labelledby="sync-title">
         <div className="companion-sync-copy">
