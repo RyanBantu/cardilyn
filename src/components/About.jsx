@@ -103,6 +103,51 @@ export default function About({ onOpenApp, onLearnHeart }) {
           </div>
         </aside>
       </div>
+
+      <aside className="about-thanks" aria-labelledby="thanks-title">
+        <div className="about-thanks-copy">
+          <h2 id="thanks-title" className="about-thanks-title">
+            A special thanks
+          </h2>
+          <p>
+            To <strong>Dr. Rentapalla Satish Kumar</strong>, General Physician and Cardiologist,
+            for all the support in helping restore my dad&apos;s health. This app exists because
+            of care like his.
+          </p>
+          <ul className="about-thanks-meta">
+            <li>MBBS, MD (PGIMER, Chandigarh), DM Cardiology (AIIMS)</li>
+            <li>Ex Assistant Professor (AIIMS)</li>
+            <li>Consultant Interventional Cardiology · Medicover Hospitals, Karimnagar</li>
+          </ul>
+          <p className="about-thanks-contact">
+            <a href="tel:+919550829311" className="email-link">
+              +91 95508 29311
+            </a>
+            {' · '}
+            <a href="mailto:mh.knr@medicoverhospitals.in" className="email-link">
+              mh.knr@medicoverhospitals.in
+            </a>
+          </p>
+        </div>
+        <div className="about-thanks-media">
+          <figure className="about-thanks-photo">
+            <img
+              src="/dr-thanks.jpg"
+              alt="Dr. Rentapalla Satish Kumar with a patient at Medicover Hospitals"
+              width={1024}
+              height={711}
+            />
+          </figure>
+          <figure className="about-thanks-card">
+            <img
+              src="/dr-card.jpg"
+              alt="Business card for Dr. Rentapalla Sathish Kumar, Medicover Hospitals Karimnagar"
+              width={1024}
+              height={616}
+            />
+          </figure>
+        </div>
+      </aside>
     </section>
   )
 }

@@ -450,6 +450,67 @@
     border-bottom:1px dotted rgba(190,24,93,0.4);
   }
   .about-rail-link:hover{border-color:#BE185D;}
+  .about-thanks{
+    margin-top:48px;
+    padding-top:36px;
+    border-top:1px solid var(--hair);
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    gap:32px;
+    align-items:start;
+  }
+  .about-thanks-title{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:clamp(26px,3.5vw,34px);
+    font-weight:650;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+    margin:0 0 14px;
+  }
+  .about-thanks-copy p{
+    font-size:16px;
+    line-height:1.7;
+    color:var(--ink);
+    margin:0 0 14px;
+    max-width:36rem;
+  }
+  .about-thanks-meta{
+    list-style:none;
+    margin:0 0 16px;
+    padding:0;
+  }
+  .about-thanks-meta li{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.55;
+    padding:6px 0 6px 14px;
+    border-left:2px solid rgba(190,24,93,0.35);
+    margin-bottom:6px;
+  }
+  .about-thanks-contact{
+    font-family:var(--mono);
+    font-size:13px;
+    margin:0 !important;
+  }
+  .about-thanks-media{
+    display:grid;
+    gap:14px;
+  }
+  .about-thanks-photo,
+  .about-thanks-card{
+    margin:0;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid var(--hair);
+    background:var(--panel);
+  }
+  .about-thanks-photo img,
+  .about-thanks-card img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
   @keyframes aboutRise{
     from{opacity:0; transform:translateY(14px);}
     to{opacity:1; transform:none;}
@@ -1018,6 +1079,12 @@
       gap:24px;
     }
     .about-rail{position:static; order:-1;}
+    .about-thanks{
+      grid-template-columns:1fr;
+      gap:22px;
+      margin-top:36px;
+      padding-top:28px;
+    }
   }
 
   @media (max-width:560px){
