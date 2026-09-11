@@ -1,76 +1,7 @@
 import AppShowcase from './AppShowcase.jsx'
+import FeatureBook from './FeatureBook.jsx'
 
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/DkeDea5t'
-
-const FEATURES = [
-  {
-    n: '01',
-    title: 'Create your account',
-    body: 'Sign up or sign in with email or Google. Cardilyn creates your family health space automatically.',
-    path: 'Open Cardilyn → Sign up',
-  },
-  {
-    n: '02',
-    title: 'Invite family',
-    body: 'Send an invite by email. They install the app, sign in with that address, and join the same shared space — everyone invited can view and update it.',
-    path: 'Home → Family members → Send invite',
-  },
-  {
-    n: '03',
-    title: 'Add medications',
-    body: 'Save each medicine with dose and times (e.g. 08:00, 20:00). Turn reminders on in Settings if needed, then mark taken or skip when one fires.',
-    path: 'Home → Medication reminders → +',
-  },
-  {
-    n: '04',
-    title: 'Log vitals',
-    body: 'Pick date, time, and meal timing, then enter BP, glucose, weight, pulse, or temperature — plus symptoms or notes if you want.',
-    path: 'Home → Health log → +',
-  },
-  {
-    n: '05',
-    title: 'Check home stats',
-    body: 'See the latest BP, glucose, weight, pulse, steps, and ECG at a glance. Pull to refresh Apple Health when connected.',
-    path: 'Home',
-  },
-  {
-    n: '06',
-    title: 'Connect Apple Health',
-    body: 'Allow heart rate, steps, and ECG, then refresh anytime. ECG needs an Apple Watch — readings sync into your family space.',
-    path: 'Home → Apple Health → Connect',
-    highlight: true,
-  },
-  {
-    n: '07',
-    title: 'Add your doctors',
-    body: 'Save name, specialty, contact, and notes once. Scheduling and PDF reports both use this directory.',
-    path: 'Home → Doctors & visits → +',
-  },
-  {
-    n: '08',
-    title: 'Schedule a visit',
-    body: 'Open a doctor, pick a time and reminder, then save. Cardilyn reminds you before the appointment.',
-    path: 'Doctor → Schedule a visit',
-  },
-  {
-    n: '09',
-    title: 'Share a health report',
-    body: 'Choose a medication list, vitals log, or complete report, set dates if needed, then share the PDF by Mail, WhatsApp, Files, and more.',
-    path: 'Doctors → Share health information',
-  },
-  {
-    n: '10',
-    title: 'Stay available offline',
-    body: 'Saved family data still shows when you are offline. Changes sync when you are back — a banner appears while disconnected.',
-    path: 'Works offline · Syncs later',
-  },
-  {
-    n: '11',
-    title: 'Settings & trust',
-    body: 'Toggle medication reminders, open Privacy / Terms / Disclaimer, send feedback, or delete your account.',
-    path: 'Home → Settings',
-  },
-]
 
 function AppleWatchSync() {
   return (
@@ -215,48 +146,7 @@ export default function Companion({ onLearnHeart }) {
         <AppleWatchSync />
       </section>
 
-      <section className="companion-features" aria-labelledby="features-title">
-        <header className="companion-features-head">
-          <p className="companion-kicker">Guide</p>
-          <h2 id="features-title" className="companion-section-title">
-            Features + how to use them
-          </h2>
-          <p className="companion-section-lede">
-            Eleven steps from signup to sharing reports — follow the path under each one.
-          </p>
-        </header>
-
-        <ol className="feature-list">
-          {FEATURES.map((feature) => (
-            <li
-              key={feature.n}
-              className={'feature-item' + (feature.highlight ? ' feature-item-highlight' : '')}
-            >
-              <span className="feature-num" aria-hidden="true">
-                {feature.n}
-              </span>
-              <div className="feature-body">
-                <div className="feature-heading">
-                  <h3 className="feature-title">{feature.title}</h3>
-                  {feature.highlight ? (
-                    <span className="feature-badge">Apple Health</span>
-                  ) : null}
-                </div>
-                <p className="feature-text">{feature.body}</p>
-                {feature.path ? <p className="feature-path">{feature.path}</p> : null}
-              </div>
-            </li>
-          ))}
-        </ol>
-
-        <blockquote className="companion-caption">
-          <p>
-            Cardilyn helps families keep medications, vitals, doctors, and visits in one place —
-            with Apple Health and shareable reports for clinicians. Invite the people you trust,
-            log what matters, and walk into appointments prepared.
-          </p>
-        </blockquote>
-      </section>
+      <FeatureBook />
     </div>
   )
 }
