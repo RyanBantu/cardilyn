@@ -1,24 +1,46 @@
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/DkeDea5t'
 
-export default function About({ onOpenApp }) {
+export default function About({ onOpenApp, onLearnHeart }) {
   return (
     <section className="about" aria-labelledby="about-title">
-      <div className="about-layout">
-        <div className="about-main">
-          <p className="about-kicker">Our story</p>
+      <div className="about-hero">
+        <div className="about-hero-copy">
+          <p className="about-brand">Cardilyn</p>
           <h1 id="about-title" className="about-title">
             Why Cardilyn
           </h1>
+          <p className="about-lead">
+            Built after my dad&apos;s angioplasty — a companion to help families stay close to the
+            people who care for them.
+          </p>
+          <div className="about-hero-actions">
+            <button type="button" className="companion-cta" onClick={onOpenApp}>
+              Check out the app
+            </button>
+            <a
+              href={TESTFLIGHT_URL}
+              className="about-hero-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open TestFlight
+            </a>
+          </div>
+        </div>
 
-          <figure className="about-photo">
-            <img
-              src="/why-cardilyn.jpg"
-              alt="A father holding his son on a park bench"
-              width={1024}
-              height={768}
-            />
-          </figure>
+        <figure className="about-hero-photo">
+          <img
+            src="/why-cardilyn.jpg"
+            alt="A father holding his son on a park bench"
+            width={1024}
+            height={768}
+          />
+        </figure>
+      </div>
 
+      <div className="about-body">
+        <article className="about-story">
+          <h2 className="about-story-label">Our story</h2>
           <div className="about-prose">
             <p>
               Recently, my dad had to go through an angioplasty. It scared me. I couldn&apos;t
@@ -45,32 +67,38 @@ export default function About({ onOpenApp }) {
             <p>This is our way of protecting our superheroes.</p>
             <p className="about-signoff">— A son who loves his dad very much.</p>
           </div>
-        </div>
+          {onLearnHeart ? (
+            <button type="button" className="about-story-cta" onClick={onLearnHeart}>
+              Learn more about the Heart →
+            </button>
+          ) : null}
+        </article>
 
-        <aside className="about-sidebar" aria-label="Get the app">
-          <div className="about-sidebar-card">
+        <aside className="about-rail" aria-label="Get the app">
+          <div className="about-rail-inner">
             <img
               src="/cardilyn-icon.png"
               alt=""
-              className="about-sidebar-icon"
-              width={72}
-              height={72}
+              className="about-rail-icon"
+              width={64}
+              height={64}
             />
-            <h2 className="about-sidebar-title">Check out the app</h2>
-            <p className="about-sidebar-text">
-              Try Cardilyn Companion on TestFlight — built to keep families and doctors in the
-              loop.
+            <p className="about-rail-kicker">iOS beta</p>
+            <h2 className="about-rail-title">Check out the app</h2>
+            <p className="about-rail-text">
+              Cardilyn Companion keeps families and doctors in the loop — medication reminders,
+              health updates, and shared care in one place.
             </p>
-            <button type="button" className="companion-cta about-sidebar-btn" onClick={onOpenApp}>
+            <button type="button" className="companion-cta about-rail-btn" onClick={onOpenApp}>
               View Companion
             </button>
             <a
               href={TESTFLIGHT_URL}
-              className="about-sidebar-link"
+              className="about-rail-link"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Open in TestFlight →
+              Join on TestFlight →
             </a>
           </div>
         </aside>

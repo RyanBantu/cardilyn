@@ -200,7 +200,10 @@ export default function App() {
       <Disclaimer />
       <div className="wrap">
         {view === 'about' ? (
-          <About onOpenApp={() => setView('companion')} />
+          <About
+            onOpenApp={() => setView('companion')}
+            onLearnHeart={() => setView('heart')}
+          />
         ) : view === 'companion' ? (
           <Companion onLearnHeart={() => setView('heart')} />
         ) : (
