@@ -5,6 +5,7 @@ import part13to17 from './part_13_17.html?raw'
 import part19to24 from './part_19_24.html?raw'
 import Disclaimer from './components/Disclaimer.jsx'
 import NavBar from './components/NavBar.jsx'
+import About from './components/About.jsx'
 import Companion from './components/Companion.jsx'
 import ContributionForm from './components/ContributionForm.jsx'
 import ArteryStageViewer from './components/ArteryStageViewer.jsx'
@@ -136,7 +137,7 @@ function setupScrollSpy() {
 
 function setupRevealAnimations() {
   const targets = document.querySelectorAll(
-    'section:not(.contribute-section):not(.companion), .hero, .flow-card, .chapter-head'
+    'section:not(.contribute-section):not(.companion):not(.about), .hero, .flow-card, .chapter-head'
   )
   targets.forEach((el) => el.classList.add('reveal'))
 
@@ -163,7 +164,7 @@ function setupRevealAnimations() {
 
 export default function App() {
   const cleanupRef = useRef([])
-  const [view, setView] = useState('companion')
+  const [view, setView] = useState('about')
 
   useEffect(() => {
     if (view !== 'heart') {
@@ -198,7 +199,9 @@ export default function App() {
       <NavBar active={view} onChange={setView} />
       <Disclaimer />
       <div className="wrap">
-        {view === 'companion' ? (
+        {view === 'about' ? (
+          <About onOpenApp={() => setView('companion')} />
+        ) : view === 'companion' ? (
           <Companion onLearnHeart={() => setView('heart')} />
         ) : (
           <>

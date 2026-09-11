@@ -1,6 +1,7 @@
 import { useEffect, useId, useState } from 'react'
 
 const LINKS = [
+  { id: 'about', label: 'About' },
   { id: 'companion', label: 'Companion' },
   { id: 'heart', label: 'Learn more about the Heart' },
 ]
@@ -33,7 +34,7 @@ export default function NavBar({ active, onChange }) {
         <button
           type="button"
           className="site-nav-brand"
-          onClick={() => select('companion')}
+          onClick={() => select('about')}
           aria-label="Cardilyn home"
         >
           <img
