@@ -5,92 +5,70 @@ const TESTFLIGHT_URL = 'https://testflight.apple.com/join/DkeDea5t'
 const FEATURES = [
   {
     n: '01',
-    tone: 'blush',
     title: 'Create your account',
-    lead: 'Your own family health space appears the moment you arrive.',
-    body: 'Sign up or sign in with email or Google — Cardilyn sets up the shared space for you.',
-    path: ['Open Cardilyn', 'Sign up / Sign in'],
+    body: 'Sign up or sign in with email or Google. Cardilyn creates your family health space automatically.',
+    path: 'Open Cardilyn → Sign up',
   },
   {
     n: '02',
-    tone: 'peach',
-    title: 'Invite the people you trust',
-    lead: 'Health is easier when the right people can see it too.',
-    body: 'Send an invite by email. They install Cardilyn, sign in with that address, and join the same shared space — everyone invited can view and update it.',
-    path: ['Home', 'Family members', 'Send invite'],
+    title: 'Invite family',
+    body: 'Send an invite by email. They install the app, sign in with that address, and join the same shared space — everyone invited can view and update it.',
+    path: 'Home → Family members → Send invite',
   },
   {
     n: '03',
-    tone: 'mint',
     title: 'Add medications',
-    lead: 'Name, dose, times — then let reminders do the nudging.',
-    body: 'Save each medicine with times like 08:00 and 20:00. Turn reminders on in Settings if needed, then mark taken or skip when one fires.',
-    path: ['Home', 'Medication reminders', '+ Add'],
+    body: 'Save each medicine with dose and times (e.g. 08:00, 20:00). Turn reminders on in Settings if needed, then mark taken or skip when one fires.',
+    path: 'Home → Medication reminders → +',
   },
   {
     n: '04',
-    tone: 'sky',
-    title: 'Log vitals in a flash',
-    lead: 'Thirty seconds for the readings that matter.',
+    title: 'Log vitals',
     body: 'Pick date, time, and meal timing, then enter BP, glucose, weight, pulse, or temperature — plus symptoms or notes if you want.',
-    path: ['Home', 'Health log', '+ Log'],
+    path: 'Home → Health log → +',
   },
   {
     n: '05',
-    tone: 'sand',
-    title: 'Glance at home stats',
-    lead: 'One screen for the latest signal from your family.',
-    body: 'See BP, glucose, weight, pulse, steps, and ECG at a glance. Pull to refresh Apple Health when it is connected.',
-    path: ['Home', 'Signal board'],
+    title: 'Check home stats',
+    body: 'See the latest BP, glucose, weight, pulse, steps, and ECG at a glance. Pull to refresh Apple Health when connected.',
+    path: 'Home',
   },
   {
     n: '06',
-    tone: 'rose',
     title: 'Connect Apple Health',
-    lead: 'Watch on the wrist, readings in Cardilyn.',
-    body: 'Allow heart rate, steps, and ECG, then refresh anytime. ECG needs an Apple Watch — once connected, fresh readings land in your family space.',
-    path: ['Home', 'Apple Health', 'Connect'],
+    body: 'Allow heart rate, steps, and ECG, then refresh anytime. ECG needs an Apple Watch — readings sync into your family space.',
+    path: 'Home → Apple Health → Connect',
     highlight: true,
   },
   {
     n: '07',
-    tone: 'lilac',
-    title: 'Save your care team',
-    lead: 'Doctors live in one directory — for visits and reports.',
-    body: 'Add name, specialty, contact, and notes once. Scheduling and PDF shares both pull from this list.',
-    path: ['Home', 'Doctors & visits', '+ Add'],
+    title: 'Add your doctors',
+    body: 'Save name, specialty, contact, and notes once. Scheduling and PDF reports both use this directory.',
+    path: 'Home → Doctors & visits → +',
   },
   {
     n: '08',
-    tone: 'peach',
     title: 'Schedule a visit',
-    lead: 'Walk in prepared — with a reminder on the way.',
-    body: 'Open a doctor, pick a time and reminder, and save. Cardilyn nudges you before the appointment.',
-    path: ['Doctor', 'Schedule a visit'],
+    body: 'Open a doctor, pick a time and reminder, then save. Cardilyn reminds you before the appointment.',
+    path: 'Doctor → Schedule a visit',
   },
   {
     n: '09',
-    tone: 'mint',
     title: 'Share a health report',
-    lead: 'A clean PDF for the clinician who needs the story.',
-    body: 'Choose medication list, vitals log, or a complete report, set dates if needed, then share by Mail, WhatsApp, Files, and more.',
-    path: ['Doctors', 'Share health information'],
+    body: 'Choose a medication list, vitals log, or complete report, set dates if needed, then share the PDF by Mail, WhatsApp, Files, and more.',
+    path: 'Doctors → Share health information',
   },
   {
     n: '10',
-    tone: 'sky',
-    title: 'Keep going offline',
-    lead: 'The family record stays readable when the network does not.',
-    body: 'Saved data still shows when you are offline. Edits sync when you are back — a banner appears while you are disconnected.',
-    path: ['Works offline', 'Syncs later'],
+    title: 'Stay available offline',
+    body: 'Saved family data still shows when you are offline. Changes sync when you are back — a banner appears while disconnected.',
+    path: 'Works offline · Syncs later',
   },
   {
     n: '11',
-    tone: 'sand',
     title: 'Settings & trust',
-    lead: 'Reminders, privacy, feedback — and leaving when you need to.',
-    body: 'Toggle medication reminders, open Privacy / Terms / Disclaimer, send feedback, or delete your account from the gear menu.',
-    path: ['Home', 'Settings'],
+    body: 'Toggle medication reminders, open Privacy / Terms / Disclaimer, send feedback, or delete your account.',
+    path: 'Home → Settings',
   },
 ]
 
@@ -244,8 +222,7 @@ export default function Companion({ onLearnHeart }) {
             Features + how to use them
           </h2>
           <p className="companion-section-lede">
-            Short stories for each corner of the app — skim the lead, follow the path chips when
-            you are ready to try it.
+            Eleven steps from signup to sharing reports — follow the path under each one.
           </p>
         </header>
 
@@ -253,31 +230,20 @@ export default function Companion({ onLearnHeart }) {
           {FEATURES.map((feature) => (
             <li
               key={feature.n}
-              className={
-                'feature-item feature-tone-' +
-                feature.tone +
-                (feature.highlight ? ' feature-item-highlight' : '')
-              }
+              className={'feature-item' + (feature.highlight ? ' feature-item-highlight' : '')}
             >
-              <div className="feature-top">
-                <span className="feature-num" aria-hidden="true">
-                  {feature.n}
-                </span>
-                {feature.highlight ? (
-                  <span className="feature-badge">Apple Health</span>
-                ) : null}
-              </div>
+              <span className="feature-num" aria-hidden="true">
+                {feature.n}
+              </span>
               <div className="feature-body">
-                <h3 className="feature-title">{feature.title}</h3>
-                <p className="feature-lead">{feature.lead}</p>
+                <div className="feature-heading">
+                  <h3 className="feature-title">{feature.title}</h3>
+                  {feature.highlight ? (
+                    <span className="feature-badge">Apple Health</span>
+                  ) : null}
+                </div>
                 <p className="feature-text">{feature.body}</p>
-                {feature.path?.length ? (
-                  <ol className="feature-path" aria-label="Path in the app">
-                    {feature.path.map((step) => (
-                      <li key={step}>{step}</li>
-                    ))}
-                  </ol>
-                ) : null}
+                {feature.path ? <p className="feature-path">{feature.path}</p> : null}
               </div>
             </li>
           ))}

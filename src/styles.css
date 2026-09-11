@@ -920,152 +920,97 @@
     border-top:1px solid var(--hair);
   }
   .companion-features-head{
-    margin:28px 0 26px;
+    margin:28px 0 28px;
   }
   .feature-list{
     list-style:none;
     margin:0;
     padding:0;
-    display:grid;
-    grid-template-columns:repeat(2, minmax(0,1fr));
-    gap:16px;
-  }
-  .feature-item{
-    position:relative;
     display:flex;
     flex-direction:column;
-    gap:12px;
-    padding:20px 20px 18px;
-    border-radius:22px;
-    border:1px solid transparent;
+    gap:0;
+    border:1px solid var(--hair);
+    border-radius:18px;
+    background:var(--panel);
     overflow:hidden;
-    isolation:isolate;
-    transition:transform .22s ease, box-shadow .22s ease;
   }
-  .feature-item::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(120% 90% at 100% 0%, rgba(255,255,255,0.55), transparent 50%),
-      linear-gradient(160deg, var(--feature-a), var(--feature-b));
-    z-index:-1;
+  .feature-item{
+    display:grid;
+    grid-template-columns:56px minmax(0,1fr);
+    gap:4px 16px;
+    padding:20px 22px;
+    border-bottom:1px solid var(--hair);
+    transition:background .15s ease;
   }
-  .feature-item:hover{
-    transform:translateY(-3px);
-    box-shadow:0 16px 36px rgba(28,33,30,0.08);
-  }
-  .feature-tone-blush{--feature-a:#FFF1F5; --feature-b:#FFE4EC; --feature-accent:#DB2777;}
-  .feature-tone-peach{--feature-a:#FFF4EB; --feature-b:#FFE8D6; --feature-accent:#C2410C;}
-  .feature-tone-mint{--feature-a:#EEFBF5; --feature-b:#DDF5EA; --feature-accent:#0F766E;}
-  .feature-tone-sky{--feature-a:#EFF6FF; --feature-b:#DCECF8; --feature-accent:#1D4ED8;}
-  .feature-tone-sand{--feature-a:#FAF6F0; --feature-b:#F3EADF; --feature-accent:#A16207;}
-  .feature-tone-rose{--feature-a:#FFF0F5; --feature-b:#FCE7F3; --feature-accent:#BE185D;}
-  .feature-tone-lilac{--feature-a:#F7F4FF; --feature-b:#EDE9FE; --feature-accent:#6D28D9;}
+  .feature-item:last-child{border-bottom:none;}
+  .feature-item:hover{background:rgba(247,245,241,0.65);}
   .feature-item-highlight{
-    grid-column:1 / -1;
-    border-color:rgba(219,39,119,0.22);
-    box-shadow:0 10px 28px rgba(219,39,119,0.08);
+    background:linear-gradient(90deg, rgba(219,39,119,0.05), transparent 55%);
   }
-  .feature-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
+  .feature-item-highlight:hover{
+    background:linear-gradient(90deg, rgba(219,39,119,0.08), rgba(247,245,241,0.4) 60%);
   }
   .feature-num{
-    display:inline-grid;
-    place-items:center;
-    min-width:42px;
-    height:42px;
-    padding:0 10px;
-    border-radius:14px;
-    background:rgba(255,255,255,0.72);
-    border:1px solid rgba(28,33,30,0.06);
     font-family:var(--mono);
     font-size:13px;
-    font-weight:700;
-    color:var(--feature-accent, #DB2777);
-    letter-spacing:0.02em;
+    font-weight:650;
+    color:#DB2777;
+    letter-spacing:0.04em;
+    padding-top:3px;
+  }
+  .feature-body{min-width:0;}
+  .feature-heading{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px 12px;
+    margin-bottom:6px;
+  }
+  .feature-title{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:clamp(18px, 2.2vw, 21px);
+    font-weight:650;
+    letter-spacing:-0.015em;
+    margin:0;
+    line-height:1.25;
   }
   .feature-badge{
     font-family:var(--mono);
-    font-size:11px;
+    font-size:10px;
     font-weight:650;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
     color:#9D174D;
-    background:rgba(255,255,255,0.8);
-    border:1px solid rgba(219,39,119,0.18);
+    background:#FCE7F3;
     border-radius:999px;
-    padding:5px 10px;
-  }
-  .feature-body{min-width:0;}
-  .feature-title{
-    font-family:'Fraunces', Georgia, serif;
-    font-size:clamp(20px, 2.4vw, 24px);
-    font-weight:650;
-    letter-spacing:-0.02em;
-    margin:0 0 8px;
-    line-height:1.2;
-  }
-  .feature-lead{
-    margin:0 0 8px;
-    font-size:15px;
-    line-height:1.45;
-    color:var(--ink);
-    font-weight:550;
+    padding:4px 9px;
   }
   .feature-text{
     font-size:14px;
     color:var(--muted);
     line-height:1.65;
-    margin:0 0 14px;
-    max-width:none;
+    margin:0 0 10px;
+    max-width:40rem;
   }
   .feature-path{
-    list-style:none;
     margin:0;
-    padding:0;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:6px;
-  }
-  .feature-path li{
-    position:relative;
     font-family:var(--mono);
-    font-size:11px;
-    font-weight:600;
-    color:var(--feature-accent, #DB2777);
-    background:rgba(255,255,255,0.78);
-    border:1px solid rgba(28,33,30,0.06);
-    border-radius:999px;
-    padding:5px 10px;
+    font-size:12px;
+    color:rgba(28,33,30,0.48);
+    letter-spacing:0.01em;
+    line-height:1.4;
   }
-  .feature-path li:not(:last-child)::after{
-    content:"→";
-    position:absolute;
-    right:-11px;
-    top:50%;
-    transform:translateY(-50%);
-    font-size:10px;
-    color:rgba(28,33,30,0.35);
-    pointer-events:none;
-  }
-  .feature-path li:not(:last-child){margin-right:8px;}
   .companion-caption{
     margin:28px 0 0;
-    padding:22px 24px;
+    padding:20px 22px;
     border-left:3px solid #DB2777;
-    background:
-      linear-gradient(135deg, rgba(219,39,119,0.06), rgba(255,255,255,0.4)),
-      #fff;
-    border-radius:0 16px 16px 0;
+    background:rgba(219,39,119,0.04);
+    border-radius:0 14px 14px 0;
   }
   .companion-caption p{
     margin:0;
-    font-family:'Fraunces', Georgia, serif;
-    font-size:17px;
-    line-height:1.65;
+    font-size:15px;
+    line-height:1.7;
     color:var(--ink);
     max-width:44rem;
   }
@@ -1977,10 +1922,7 @@
     .about-hero-photo{border-radius:16px;}
     .about-prose p{font-size:16px;}
     .about-prose p:first-child{font-size:19px;}
-    .feature-list{grid-template-columns:1fr;}
-    .feature-item-highlight{grid-column:auto;}
-    .feature-item{padding:18px 16px 16px;}
-    .feature-item:hover{transform:none;}
+    .feature-item{grid-template-columns:44px minmax(0,1fr); gap:2px 12px; padding:16px 16px;}
     .watch-sync-stage{min-height:280px; flex-direction:column; gap:14px;}
   }
 
@@ -1996,7 +1938,6 @@
     .mock-pulse-ring::before,
     .mock-pulse-dot{animation:none !important; transition:none !important;}
     .feature-item{transition:none;}
-    .feature-item:hover{transform:none; box-shadow:none;}
     .watch-bpm-num,
     .watch-ecg-path,
     .watch-sync-pulse,
