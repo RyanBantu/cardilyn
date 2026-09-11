@@ -137,7 +137,7 @@ function setupScrollSpy() {
 
 function setupRevealAnimations() {
   const targets = document.querySelectorAll(
-    'section:not(.contribute-section):not(.companion):not(.about), .hero, .flow-card, .chapter-head'
+    'section:not(.contribute-section):not(.companion):not(.companion-sync):not(.companion-features):not(.about), .hero, .flow-card, .chapter-head'
   )
   targets.forEach((el) => el.classList.add('reveal'))
 
