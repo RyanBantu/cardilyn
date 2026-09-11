@@ -156,7 +156,7 @@ function setupRevealAnimations() {
 
 export default function App() {
   const cleanupRef = useRef([])
-  const [view, setView] = useState('heart')
+  const [view, setView] = useState('companion')
 
   useEffect(() => {
     if (view !== 'heart') {
@@ -191,7 +191,9 @@ export default function App() {
       <NavBar active={view} onChange={setView} />
       <Disclaimer />
       <div className="wrap">
-        {view === 'heart' ? (
+        {view === 'companion' ? (
+          <Companion onLearnHeart={() => setView('heart')} />
+        ) : (
           <>
             <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
             <div id="chapter-calcifications-content" className="chapter-content" hidden>
@@ -208,11 +210,9 @@ export default function App() {
               <div dangerouslySetInnerHTML={{ __html: part19to24 }} />
               <PlaqueShapesAndFlow />
             </div>
-            <ContributionForm />
           </>
-        ) : (
-          <Companion />
         )}
+        <ContributionForm />
         <footer className="site-footer">
           <p className="footer-disclaimer">
             Compiled through self-directed research · For education only · Not medical advice ·

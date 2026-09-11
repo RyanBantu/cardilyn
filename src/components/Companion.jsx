@@ -1,6 +1,6 @@
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/DkeDea5t'
 
-export default function Companion() {
+export default function Companion({ onLearnHeart }) {
   return (
     <section className="companion" aria-labelledby="companion-title">
       <div className="companion-card">
@@ -27,14 +27,19 @@ export default function Companion() {
           A personal companion for learning about your heart. Join the TestFlight beta to try
           the iOS app.
         </p>
-        <a
-          href={TESTFLIGHT_URL}
-          className="companion-cta"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open in TestFlight
-        </a>
+        <div className="companion-actions">
+          <a
+            href={TESTFLIGHT_URL}
+            className="companion-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open in TestFlight
+          </a>
+          <button type="button" className="companion-secondary" onClick={onLearnHeart}>
+            Learn more about the Heart
+          </button>
+        </div>
         <p className="companion-note">
           Requires an iPhone or iPad with the{' '}
           <a

@@ -6,6 +6,7 @@ const TOPICS = [
   'Coronary arteries',
   'Cardiac veins',
   'Calcifications',
+  'App feedback',
   'Clinical context',
   'Correction or clarification',
   'Other',
@@ -57,8 +58,8 @@ export default function ContributionForm() {
     <section id="contribute" className="contribute-section">
       <h2>Contribute to this reference</h2>
       <p className="lede">
-        Know something that should be added, corrected, or expanded? Share it below. Your
-        submission goes directly to the maintainer at{' '}
+        Know something that should be added, corrected, or expanded — or have feedback about the
+        Cardilyn app? Share it below. Your submission goes directly to the maintainer at{' '}
         <a href={`mailto:${EMAIL}`} className="email-link">
           {EMAIL}
         </a>
@@ -112,7 +113,7 @@ export default function ContributionForm() {
           <textarea
             name="message"
             rows={6}
-            placeholder="Describe the anatomy, correction, source, or context you'd like to add…"
+            placeholder="Describe the anatomy, correction, source, app feedback, or context you'd like to add…"
             value={form.message}
             onChange={update('message')}
             required
