@@ -370,19 +370,3 @@ export const SHOWCASE_SCREENS = [
     caption: 'Medications · Health log · Doctors & visits · Family — all in one app.',
   },
 ]
-
-/** Compact phone frame used inside the how-to book. */
-export function MiniPhone({ screenId, active = true, label }) {
-  const Screen = SCREEN_VIEWS[screenId] || ScreenHome
-  return (
-    <div className={'book-mini-phone' + (active ? ' is-active' : '')} aria-hidden={!active}>
-      <div className="book-mini-bezel">
-        <div className="book-mini-island" />
-        <div className="book-mini-screen" key={active ? screenId : 'idle'}>
-          {active ? <Screen /> : <div className="book-mini-placeholder" />}
-        </div>
-      </div>
-      {label ? <span className="book-mini-label">{label}</span> : null}
-    </div>
-  )
-}

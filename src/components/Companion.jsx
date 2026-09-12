@@ -1,5 +1,5 @@
 import AppShowcase from './AppShowcase.jsx'
-import FeatureBook from './FeatureBook.jsx'
+import FeatureCarousel from './FeatureCarousel.jsx'
 
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/DkeDea5t'
 
@@ -146,7 +146,7 @@ export default function Companion({ onLearnHeart }) {
         <AppleWatchSync />
       </section>
 
-      <FeatureBook />
+      <FeatureCarousel />
     </div>
   )
 }
