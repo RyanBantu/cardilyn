@@ -47,7 +47,7 @@ npx vercel --prod
 React route for Play Store / App Store listing:
 
 - Component: `src/pages/PrivacyPolicy.jsx` (routed at `/privacy/` via `react-router-dom`)
-- Live URL: [https://cardilyn.vercel.app/privacy/](https://cardilyn.vercel.app/privacy/)
+- Live URL: [https://www.cardilyn.com/privacy/](https://www.cardilyn.com/privacy/)
 
 Paste that URL into Google Play Console → App content → Privacy policy.
 
