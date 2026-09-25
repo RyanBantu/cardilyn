@@ -51,4 +51,11 @@ React route for Play Store / App Store listing:
 
 Paste that URL into Google Play Console → App content → Privacy policy.
 
+## Delete account
+
+Play Console Data safety → Delete account URL:
+
+- Component: `src/pages/DeleteAccount.jsx` (routed at `/delete-account/`)
+- Live URL: [https://www.cardilyn.com/delete-account/](https://www.cardilyn.com/delete-account/)
+
 > **Note:** The contribution form uses [FormSubmit](https://formsubmit.co). On the first submission, FormSubmit sends an activation email to **bantu.ryan@gmail.com** — click the link to start receiving contributions. The "Open in email app" button works immediately as a fallback.

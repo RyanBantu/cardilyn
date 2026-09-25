@@ -237,6 +237,10 @@ export default function App() {
               Privacy policy
             </Link>
             {' · '}
+            <Link to="/delete-account/" className="email-link">
+              Delete account
+            </Link>
+            {' · '}
             <a href="#contribute" className="email-link">
               Contribute
             </a>

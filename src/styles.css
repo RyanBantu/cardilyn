@@ -2158,7 +2158,8 @@
   }
   .privacy-card p{ margin:0 0 10px; }
   .privacy-card p:last-child{ margin-bottom:0; }
-  .privacy-card ul{
+  .privacy-card ul,
+  .privacy-card ol{
     margin:0; padding-left:1.2rem;
   }
   .privacy-card li{ margin-bottom:6px; }

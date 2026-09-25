@@ -104,7 +104,10 @@ export default function PrivacyPolicy() {
           <ul>
             <li>You can edit or delete logs inside the app</li>
             <li>You can leave or be removed from a family</li>
-            <li>You can delete your account from Settings</li>
+            <li>
+              You can delete your account from Settings, or follow{' '}
+              <Link to="/delete-account/">delete-account instructions</Link>
+            </li>
             <li>
               You can disconnect Apple Health in iOS Settings → Privacy &amp; Security →
               Health
