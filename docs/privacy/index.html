@@ -6,9 +6,10 @@
     <title>Privacy Policy — Cardilyn</title>
     <meta
       name="description"
-      content="Cardilyn privacy policy: how we handle account, family, and health data."
+      content="Cardilyn privacy policy: how we handle account, family, HealthKit, and Health Connect data."
     />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="./cardilyn-icon.png" />
+    <link rel="icon" type="image/png" href="./cardilyn-icon.png" />
     <style>
       :root {
         --ink: #1c211e;
@@ -22,16 +23,41 @@
       }
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
           Arial, sans-serif;
         background: var(--bg);
         color: var(--ink);
         line-height: 1.55;
       }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 20px 20px 0;
+      }
+      .top img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+      }
+      .top a.home {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 650;
+      }
+      .top a.back {
+        margin-left: auto;
+        color: var(--teal);
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
       main {
         max-width: 720px;
         margin: 0 auto;
-        padding: 40px 20px 80px;
+        padding: 24px 20px 80px;
       }
       a {
         color: var(--teal);
@@ -74,6 +100,11 @@
     </style>
   </head>
   <body>
+    <div class="top">
+      <img src="./cardilyn-icon.png" alt="" width="36" height="36" />
+      <a class="home" href="https://cardilyn.vercel.app/">Cardilyn</a>
+      <a class="back" href="https://cardilyn.vercel.app/">← Home</a>
+    </div>
     <main>
       <h1>Cardilyn Privacy Policy</h1>
       <p class="meta">
@@ -179,9 +210,8 @@
       </section>
 
       <footer>
-        This policy covers the Cardilyn mobile apps (iOS and Android). For the educational
-        heart-anatomy site on this domain, content is for learning only and is not medical
-        advice.
+        This policy covers the Cardilyn mobile apps (iOS and Android). Educational content
+        on this website is for learning only and is not medical advice.
       </footer>
     </main>
   </body>

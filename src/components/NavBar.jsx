@@ -6,6 +6,8 @@ const LINKS = [
   { id: 'heart', label: 'Learn more about the Heart' },
 ]
 
+const EXTERNAL = [{ href: '/privacy/', label: 'Privacy' }]
+
 export default function NavBar({ active, onChange }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuId = useId()
@@ -59,6 +61,11 @@ export default function NavBar({ active, onChange }) {
               {link.label}
             </button>
           ))}
+          {EXTERNAL.map((link) => (
+            <a key={link.href} className="site-nav-tab" href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </nav>
 
         <button
@@ -86,6 +93,11 @@ export default function NavBar({ active, onChange }) {
           >
             {link.label}
           </button>
+        ))}
+        {EXTERNAL.map((link) => (
+          <a key={link.href} className="site-nav-drawer-link" href={link.href}>
+            {link.label}
+          </a>
         ))}
       </nav>
     </header>

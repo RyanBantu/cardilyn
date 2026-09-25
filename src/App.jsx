@@ -232,6 +232,10 @@ export default function App() {
             Consult a cardiologist for any health concerns · Do not use for self-treatment
           </p>
           <p>
+            <a href="/privacy/" className="email-link">
+              Privacy policy
+            </a>
+            {' · '}
             <a href="#contribute" className="email-link">
               Contribute
             </a>
