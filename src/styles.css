@@ -2110,3 +2110,59 @@
     .phone-progress-bar{width:100%;}
     circle animateMotion{}
   }
+
+  /* ---------- PRIVACY PAGE ---------- */
+  .privacy-page{
+    min-height:100vh;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  .privacy-top{
+    display:flex; align-items:center; gap:12px;
+    max-width:720px; margin:0 auto;
+    padding:20px 20px 0;
+  }
+  .privacy-brand{
+    display:inline-flex; align-items:center; gap:10px;
+    color:var(--ink); text-decoration:none; font-weight:650;
+  }
+  .privacy-brand img{
+    width:36px; height:36px; border-radius:8px;
+  }
+  .privacy-back{
+    margin-left:auto;
+    color:var(--lung); font-weight:600;
+    text-decoration:none; font-size:0.95rem;
+  }
+  .privacy-main{
+    max-width:720px; margin:0 auto;
+    padding:24px 20px 80px;
+  }
+  .privacy-main h1{
+    font-size:1.85rem; margin:0 0 8px; letter-spacing:-0.02em;
+  }
+  .privacy-meta{
+    color:var(--muted); font-size:0.95rem; margin-bottom:28px;
+  }
+  .privacy-meta a, .privacy-card a{
+    color:var(--lung);
+  }
+  .privacy-card{
+    background:var(--panel);
+    border-radius:16px;
+    padding:20px 22px;
+    margin-bottom:14px;
+  }
+  .privacy-card h2{
+    font-size:1.05rem; margin:0 0 10px; color:var(--lung);
+  }
+  .privacy-card p{ margin:0 0 10px; }
+  .privacy-card p:last-child{ margin-bottom:0; }
+  .privacy-card ul{
+    margin:0; padding-left:1.2rem;
+  }
+  .privacy-card li{ margin-bottom:6px; }
+  .privacy-card ul ul{ margin-top:6px; }
+  .privacy-footer-note{
+    margin-top:28px; color:var(--muted); font-size:0.9rem;
+  }

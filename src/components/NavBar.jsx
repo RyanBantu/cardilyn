@@ -1,12 +1,11 @@
 import { useEffect, useId, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const LINKS = [
   { id: 'about', label: 'About' },
   { id: 'companion', label: 'Companion' },
   { id: 'heart', label: 'Learn more about the Heart' },
 ]
-
-const EXTERNAL = [{ href: '/privacy/', label: 'Privacy' }]
 
 export default function NavBar({ active, onChange }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -61,11 +60,9 @@ export default function NavBar({ active, onChange }) {
               {link.label}
             </button>
           ))}
-          {EXTERNAL.map((link) => (
-            <a key={link.href} className="site-nav-tab" href={link.href}>
-              {link.label}
-            </a>
-          ))}
+          <Link className="site-nav-tab" to="/privacy/">
+            Privacy
+          </Link>
         </nav>
 
         <button
@@ -94,11 +91,13 @@ export default function NavBar({ active, onChange }) {
             {link.label}
           </button>
         ))}
-        {EXTERNAL.map((link) => (
-          <a key={link.href} className="site-nav-drawer-link" href={link.href}>
-            {link.label}
-          </a>
-        ))}
+        <Link
+          className="site-nav-drawer-link"
+          to="/privacy/"
+          onClick={() => setMenuOpen(false)}
+        >
+          Privacy
+        </Link>
       </nav>
     </header>
   )

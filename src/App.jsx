@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './styles.css'
 import bodyHtml from './body.html?raw'
 import part13to17 from './part_13_17.html?raw'
@@ -232,9 +233,9 @@ export default function App() {
             Consult a cardiologist for any health concerns · Do not use for self-treatment
           </p>
           <p>
-            <a href="/privacy/" className="email-link">
+            <Link to="/privacy/" className="email-link">
               Privacy policy
-            </a>
+            </Link>
             {' · '}
             <a href="#contribute" className="email-link">
               Contribute

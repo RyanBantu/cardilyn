@@ -44,12 +44,11 @@ npx vercel --prod
 
 ## Privacy policy
 
-Public page for Play Store / App Store listing:
+React route for Play Store / App Store listing:
 
-- Local path: `public/privacy/index.html` (also mirrored under `docs/privacy/`)
+- Component: `src/pages/PrivacyPolicy.jsx` (routed at `/privacy/` via `react-router-dom`)
 - Live URL: [https://cardilyn.vercel.app/privacy/](https://cardilyn.vercel.app/privacy/)
-- GitHub Pages (if enabled from `/docs`): [https://ryanbantu.github.io/cardilyn/privacy/](https://ryanbantu.github.io/cardilyn/privacy/)
 
-Paste the live URL into Google Play Console → App content → Privacy policy.
+Paste that URL into Google Play Console → App content → Privacy policy.
 
 > **Note:** The contribution form uses [FormSubmit](https://formsubmit.co). On the first submission, FormSubmit sends an activation email to **bantu.ryan@gmail.com** — click the link to start receiving contributions. The "Open in email app" button works immediately as a fallback.
