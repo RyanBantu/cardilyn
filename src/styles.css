@@ -2156,6 +2156,10 @@
   .privacy-card h2{
     font-size:1.05rem; margin:0 0 10px; color:var(--lung);
   }
+  .privacy-card h3{
+    font-size:0.95rem; margin:14px 0 8px; color:var(--ink); font-weight:650;
+  }
+  .privacy-card h3:first-of-type{ margin-top:4px; }
   .privacy-card p{ margin:0 0 10px; }
   .privacy-card p:last-child{ margin-bottom:0; }
   .privacy-card ul,
